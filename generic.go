@@ -5,7 +5,7 @@ import (
 	"reflect"
 )
 
-func in(item interface{}, arrayType interface{}) bool {
+func In(item interface{}, arrayType interface{}) bool {
 	arr := reflect.ValueOf(arrayType)
 	if arr.Kind() != reflect.Array && arr.Kind() != reflect.Slice {
 		panic(fmt.Sprintf("Invalid data type: %v", arr.Kind()))

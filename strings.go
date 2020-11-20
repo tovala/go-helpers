@@ -1,9 +1,9 @@
 package helpers
 
-func filter(base []string, exclude []string) []string {
+func Filter(base []string, exclude []string) []string {
 	filtered := []string{}
 	for _, f := range base {
-		if in(f, exclude) {
+		if In(f, exclude) {
 			continue
 		}
 		filtered = append(filtered, f)
@@ -11,7 +11,7 @@ func filter(base []string, exclude []string) []string {
 	return filtered
 }
 
-func wrapStrings(inputs []string, mark string) []string {
+func WrapStrings(inputs []string, mark string) []string {
 	outputs := []string{}
 	for _, f := range inputs {
 		outputs = append(outputs, mark+f+mark)
@@ -19,7 +19,7 @@ func wrapStrings(inputs []string, mark string) []string {
 	return outputs
 }
 
-func prependStrings(inputs []string, prefix string) []string {
+func PrependStrings(inputs []string, prefix string) []string {
 	outputs := []string{}
 	for _, f := range inputs {
 		outputs = append(outputs, prefix+f)

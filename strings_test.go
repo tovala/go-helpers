@@ -9,7 +9,7 @@ import (
 func TestFilter(t *testing.T) {
 	items := []string{"foo", "bar", "wiz", "bang"}
 	exclude := []string{"bar", "bang"}
-	filtered := filter(items, exclude)
+	filtered := Filter(items, exclude)
 	expected := []string{"foo", "wiz"}
 	for i, v := range filtered {
 		assert.Equal(t, v, expected[i])
@@ -19,7 +19,7 @@ func TestFilter(t *testing.T) {
 func TestWrapStrings(t *testing.T) {
 	mark := "mark"
 	items := []string{"foo", "bar", "wiz", "bang"}
-	wrapped := wrapStrings(items, mark)
+	wrapped := WrapStrings(items, mark)
 	for i, v := range items {
 		assert.Equal(t, mark+v+mark, wrapped[i])
 	}
@@ -28,7 +28,7 @@ func TestWrapStrings(t *testing.T) {
 func TestPrependStrings(t *testing.T) {
 	prefix := "mark"
 	items := []string{"foo", "bar", "wiz", "bang"}
-	prepended := prependStrings(items, prefix)
+	prepended := PrependStrings(items, prefix)
 	for i, v := range items {
 		assert.Equal(t, prefix+v, prepended[i])
 	}
