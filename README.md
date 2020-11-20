@@ -1,2 +1,2 @@
-# go-tovala
+# go-helpers
 Our own lil stdlib.
